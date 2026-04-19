@@ -4,7 +4,7 @@ import  { Children } from 'react';
 const LayoutPage = ({children}) => {
     return (
         <div>
-            <h2 className='text-center font-bold'>Deshboard layout pages!! common area </h2>
+            {/* <h2 className='text-center font-bold'>Deshboard layout pages!! common area </h2> */}
             {/* <div>
                 <li> <Link href="/Deshboard/reveneo">Reveneo</Link> </li>
                 <li> <Link href="/Deshboard/payment">Payment</Link> </li>
@@ -23,6 +23,7 @@ const LayoutPage = ({children}) => {
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu bg-base-200 min-h-full w-80 p-4">
                         {/* Sidebar content here */}
+                        <li><Link href="/">Deshboard</Link></li>
                         <li><Link href="/Deshboard/reveneo">Reveneo</Link></li>
                         <li><Link href="/Deshboard/payment">Payment</Link></li>
                     </ul>
