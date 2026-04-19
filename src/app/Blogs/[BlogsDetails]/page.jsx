@@ -1,7 +1,9 @@
-import Link from 'next/link';
 import React from 'react';
 
-const Blogs = () => {
+const BlogsDetails2 = async ({ params }) => {
+    const res = await params;
+    console.log("dynamic data id: ", res);
+
 
     const BlogsData = [
         {
@@ -50,22 +52,14 @@ const Blogs = () => {
         }
     ];
 
+    const findData = BlogsData.find(item => item.id === parseInt(res.BlogsDetails) );
+    console.log("find data: ", findData);
     return (
-        <div className='max-w-11/12 mx-auto p-10 my-20'>
-
-            <div>
-                {
-                    BlogsData.map((blog, id) => <div key={id} className='p-4 gap-4 border-2 m-4 shadow-xl rounded-sm'>
-                            <h2> {blog.author} </h2>
-                            <p>{blog.description} </p>
-                        <Link href={`/Blogs/${blog.id}`} >show details</Link>
-                        </div>
-                    )
-                }
-            </div>
-            
+        <div className='max-w-11/12 mx-auto my-10 p-10'>
+            <h1> {findData.author} </h1>
+            <p> {findData.title} </p>
         </div>
     );
 };
 
-export default Blogs;
+export default BlogsDetails2;
