@@ -1,5 +1,11 @@
 import React from 'react';
 
+
+export const metadata = {
+    title: 'Blogs Details',
+    description: '...',
+}
+
 const BlogsDetails2 = async ({ params }) => {
     const res = await params;
     console.log("dynamic data id: ", res);
